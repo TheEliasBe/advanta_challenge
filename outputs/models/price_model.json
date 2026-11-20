@@ -1,0 +1,33 @@
+{
+  "model_file": "price_model.joblib",
+  "selected_model": "Gradient boosting (log price)",
+  "target": "realSum (observed price; USD per catalogue, stay basis unconfirmed)",
+  "features": [
+    "person_capacity",
+    "bedrooms",
+    "dist",
+    "metro_dist",
+    "attr_index_norm",
+    "rest_index_norm",
+    "lng",
+    "lat",
+    "cleanliness_rating",
+    "guest_satisfaction_overall",
+    "host_is_superhost",
+    "city",
+    "room_type",
+    "weekday"
+  ],
+  "trained_on": "train + validation location groups (~80% of rows)",
+  "test_metrics": {
+    "MAE": 68.5774,
+    "RMSE": 187.4036,
+    "R2": 0.4623,
+    "median_APE_pct": 18.1266
+  },
+  "input_sha256": "a4ff3e5cb6ac510fe4df5b0ace8f4cb1e137b6fc2b98b8d063f968ed8fb1a011",
+  "seed": 42,
+  "sklearn_version": "1.9.1",
+  "usage": "joblib.load(path).predict(frame[FEATURES]) with the same columns as the CSV",
+  "limitations": "Benchmarks existing listings (uses ratings); not a demand or revenue model; a gap to the prediction is not evidence of underpricing on its own."
+}

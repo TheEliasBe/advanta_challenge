@@ -1,0 +1,32 @@
+# Local environments and caches
+.venv/
+.uv-cache/
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+__marimo__/
+.ipynb_checkpoints/
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Source data and generated artifacts stay local
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+outputs/figures/*
+!outputs/figures/.gitkeep
+outputs/tables/*
+!outputs/tables/.gitkeep
+outputs/reports/*
+!outputs/reports/.gitkeep
+outputs/slides/*
+!outputs/slides/.gitkeep
+# Deliverables are versioned: the two decks and the saved model
+!outputs/slides/*.pptx
+
+# Deck generator dependencies
+deck/node_modules/
